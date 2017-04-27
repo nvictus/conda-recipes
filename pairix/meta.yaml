@@ -1,0 +1,38 @@
+package:
+  name: pairix
+  version: "0.1.4"
+
+source:
+  git_rev: 0.1.4
+  git_url: https://github.com/4dn-dcic/pairix.git
+
+build:
+  number: 0
+  
+requirements:
+  build:
+    - gcc
+    - zlib
+    - python
+    - setuptools
+
+  run:
+    - zlib
+    - python
+
+test:
+  imports:
+    - pypairix
+  source_files:
+    - samples/test_4dn.pairs.gz
+    - samples/test_4dn.pairs.gz.px2
+  commands:
+    - pairix -l samples/test_4dn.pairs.gz
+  requires:
+    - python
+
+about:
+  home: https://github.com/4dn-dcic/pairix
+  license: MIT
+  summary: 2D indexing on bgzipped text files of paired genomic coordinates
+  license_family: MIT
