@@ -17,7 +17,6 @@ requirements:
     - setuptools
 
   run:
-    - zlib
     - python
 
 test:
@@ -28,8 +27,6 @@ test:
     - samples/test_4dn.pairs.gz.px2
   commands:
     - pairix -l samples/test_4dn.pairs.gz
-  requires:
-    - python
 
 about:
   home: https://github.com/4dn-dcic/pairix
